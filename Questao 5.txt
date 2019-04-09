@@ -1,0 +1,17 @@
+Preciso do comando SQL que me traga a soma dos salários recebidos por colaborador e estado no ano de 2014 das tabelas 
+
+
+
+
+		SALARIOS = Campos 
+		(ID_SALARIO, ID_COLABORADOR, VALOR_PAGO, DATA_PAGAMENTO)
+		
+		COLABORADORES = Campos (
+		ID_COLABORADOR, NOME_COLABORADOR, SEXO, IDADE, ESTADO_CIVIL)
+		
+		LOCAL_DE_TRABALHO = Campos 
+		ID_LOCAL, ID_COLABORADOR, NOME_LOCAL, CIDADE, UF)
+		
+		Select Sum(VALOR_PAGO) FROM SALARIOS s 
+		JOIN COLABORADORES c on c.ID_COLABORADOR = s.ID_COLABORADOR
+		Where YEAR(s.DATA_PAGAMENTO) = 2014
